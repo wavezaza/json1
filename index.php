@@ -21,7 +21,7 @@
         $("#get1").click(()=>{
             var x = $("#x").val();
             var y = $("#y").val();
-            var url = "http://cj-android-demon.herokuapp.com/add.php?x=%22+x+%22&y=" + y;
+            var url = "http://cj-android-demon.herokuapp.com/add.php?x="+x+"&y=" + y;
             console.log(url);
             $.get(url, (data, status)=>{
                 console.log(data);
@@ -42,15 +42,15 @@
                 console.log(status);
                 $("#txtResult").text(data);
             });
-
+           
         });
         $("#json1").click(()=>{
-
-            var url = "http://cj-android-demon.herokuapp.com/json2.php";
+         
+            var url = "https://cj-android-demon.herokuapp.com/json2.php";
             console.log(url);
             $.get(url, (data, status)=>{
                 console.log(data);
-
+                
             })
         });
     });
